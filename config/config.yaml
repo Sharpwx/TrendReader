@@ -41,7 +41,7 @@ app:
 # ===============================================================
 schedule:
   enabled: true                         # 是否启用调度系统
-  preset: "office_hours"             # 预设模板名称（见上方说明）
+  preset: "morning_evening"             # 预设模板名称（见上方说明）
 
 
 # ===============================================================
@@ -63,8 +63,6 @@ platforms:
       name: "澎湃新闻"
     - id: "bilibili-hot-search"
       name: "bilibili 热搜"
-    - id: "cls-hot"
-      name: "财联社热门"
     - id: "tieba"
       name: "贴吧"
     - id: "weibo"
@@ -76,24 +74,24 @@ platforms:
 
       # name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
 
-  - id: "cankaoxiaoxi"
-    name: "参考消息"
-  - id: "sputniknewscn"
-    name: "卫星通讯社"
-  - id: "zaobao"
-    name: "联合早报"
-  - id: "mktnews"
-    name: "MKT新闻"
-  - id: "kaopu"
-    name: "靠谱新闻"
-      - id: "chongbuluo"
-    name: "虫部落"
-    id: "cls-telegraph"
-    name: "财联社 电报"
-    id: "cls-depth"
-    name: "财联社 深度"
-  - id: "xueqiu"
-    name: "雪球"
+    - id: "cankaoxiaoxi"
+      name: "参考消息"
+    - id: "sputniknewscn"
+      name: "卫星通讯社"
+    - id: "zaobao"
+      name: "联合早报"
+    - id: "mktnews"
+      name: "MKT新闻"
+    - id: "kaopu"
+      name: "靠谱新闻"
+    - id: "chongbuluo"
+      name: "虫部落"
+    - id: "cls-telegraph"
+      name: "财联社 电报"
+    - id: "cls-depth"
+      name: "财联社 深度"
+    - id: "xueqiu"
+      name: "雪球"
  
 
 
@@ -279,7 +277,7 @@ display:
   # 控制各区域是否启用（配合 region_order 使用）
   regions:
     hotlist: true                     # 热榜区域（关键词匹配 / AI 智能筛选）
-    new_items: false                   # 新增热点区域（含热榜新增 + RSS 新增）
+    new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
     rss: true                         # RSS 订阅区域
